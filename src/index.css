@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Livvic:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    outline: none;
+}
+
+.bg-color-header {
+    background: linear-gradient(90deg, #03228f 10%, #0e73e4 100%) !important;
+}
+
+.sign-in-btn {
+    background: linear-gradient(160deg, #03228F 0%, #0B70E1 77%);
+}
+
+.sign-in-btn:hover {
+    background: linear-gradient(160deg, #0B70E1 0%, #03228F 77%);
+}
+
+.service-section, .contact-section {
+    background: #F6F7F9;
+}
+
+.service-section p {
+    font-family: "Livvic", sans-serif;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+.service-section h2 {
+    font-family: "Livvic", sans-serif;
+}   
+
+.service-card:hover h5{
+    cursor: pointer;
+    color: #106EEA;
+}
+
+.contact-left{
+    background: linear-gradient(250deg, #4E95ED 0%, #03228F 100%);;
+}
+
+.contact-left h4, h2{
+    font-family: "Livvic", sans-serif;
+}
