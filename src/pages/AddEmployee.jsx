@@ -42,10 +42,10 @@ const AddEmployee = () => {
                         <label htmlFor="department" className="block mb-2 text-sm font-medium text-gray-900">Department</label>
                         <select onChange={handleChange} value={input.department} id="department" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
                             <option value="">Choose a Department</option>
-                            <option value="1">Designing</option>
-                            <option value="2">Development</option>
-                            <option value="3">Finance</option>
-                            <option value="4">Sales And Marketing</option>
+                            <option value="Designing">Designing</option>
+                            <option value="Development">Development</option>
+                            <option value="Finance">Finance</option>
+                            <option value="Sales And Marketing">Sales And Marketing</option>
                         </select>
                     </div>
                     <div>
