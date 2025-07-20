@@ -14,10 +14,6 @@ const Employees = () => {
         setSearchEmp(data);
     }, []);
 
-    // useEffect(() => {
-    //     localStorage.setItem("employees", JSON.stringify(employees));
-    // }, [employees])
-
     const employeeDelete = (id) => {
         const updatedEmployee = employees.filter((emp) => {
             return emp.id !== id;
