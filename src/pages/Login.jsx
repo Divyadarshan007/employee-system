@@ -15,7 +15,7 @@ const Login = ({ setIsLoggedIn }) => {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        if (input.email == "admin@gmail.com" && input.password == "admin@123") {
+        if (input.email == "admin" && input.password == "password") {
             setIsLoggedIn(true);
             localStorage.setItem("isLoggedIn", JSON.stringify(true))
             toast.success("Admin Logged In Successfully !");
@@ -27,23 +27,28 @@ const Login = ({ setIsLoggedIn }) => {
     }
 
     return (
-        <section>
-            <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto h-[80vh] lg:py-0">
-                <div className="w-full bg-white rounded-sm shadow dark:border md:mt-0 sm:max-w-md xl:p-0">
-                    <div className="p-6 space-y-4 md:space-y-6 sm:p-7">
+        <section className="bg-[#152733] h-screen">
+            <div className="image-holder">
+                <div className="info-holder">
+                    <img src="/images/graphic3.svg" alt="" />
+                </div>
+            </div>
+            <div className="flex items-center justify-center  mx-auto h-screen lg:py-0">
+                <div className="w-full z-20 position-relative bg-white rounded-xl shadow  dark:border md:mt-0 sm:max-w-md xl:p-0">
+                    <div className="p-6 space-y-4 md:space-y-6 sm:px-[30px] sm:py-[35px] ">
                         <h1 className="text-xl font-bold text-gray-900 md:text-2xl">
                             Let’s Get You Logged In
                         </h1>
                         <form onSubmit={handleSubmit} className="space-y-4 md:space-y-6" action="#">
                             <div>
                                 <label htmlFor="email" className="block mb-2 text-sm font-medium text-gray-900">Email</label>
-                                <input onChange={handleChange} type="email" name="email" id="email" className="bg-gray-50 border border-gray-300 text-gray-800 rounded-sm focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5" placeholder="name@mail.com" />
+                                <input onChange={handleChange} type="text" name="email" id="email" className="bg-gray-50 border border-gray-300 text-gray-800 rounded-sm focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5" placeholder="name@mail.com" />
                             </div>
                             <div>
                                 <label htmlFor="password" className="block mb-2 text-sm font-medium text-gray-900">Password</label>
                                 <input onChange={handleChange} type="password" name="password" id="password" placeholder="••••••••" className="bg-gray-50 border border-gray-300 text-gray-800 rounded-sm focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5" />
                             </div>
-                            <button type="submit" className="w-full text-white sign-in-btn font-medium rounded-sm text-sm py-2.5 text-center transition-all duration-300">Sign In</button>
+                            <button type="submit" className="px-7 text-white sign-in-btn font-medium rounded-lg text-sm py-2.5 text-center ">Login</button>
                         </form>
                     </div>
                 </div>

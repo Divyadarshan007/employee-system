@@ -8,19 +8,23 @@
 }
 
 .bg-color-header {
-    background: linear-gradient(90deg, #03228f 10%, #0e73e4 100%) !important;
+    background-color: #152733;
 }
 
 .sign-in-btn {
-    background: linear-gradient(160deg, #03228F 0%, #0B70E1 77%);
+    background-color: #0093ff;
 }
 
+.sign-in-btn{
+    transition: 0.3s all linear;
+}
 .sign-in-btn:hover {
-    background: linear-gradient(160deg, #0B70E1 0%, #03228F 77%);
+    background-color: #1E6FE3;
 }
 
-.service-section, .contact-section {
-    background: #F6F7F9;
+.service-section,
+.contact-section {
+    background: #152733;
 }
 
 .service-section p {
@@ -31,17 +35,56 @@
 
 .service-section h2 {
     font-family: "Livvic", sans-serif;
-}   
+}
 
-.service-card:hover h5{
+.service-card h5 {
+    transition: 0.3s all linear;
+}
+.service-card:hover h5 {
     cursor: pointer;
     color: #106EEA;
 }
 
-.contact-left{
-    background: linear-gradient(250deg, #4E95ED 0%, #03228F 100%);;
+.contact-left {
+    background: linear-gradient(250deg, #4E95ED 0%, #03228F 100%);
+    
 }
 
-.contact-left h4, h2{
+.contact-left h4,
+h2 {
     font-family: "Livvic", sans-serif;
+}
+
+.info-holder {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.info-holder img {
+    width: 530px;
+    animation: zoom-in 50s linear 0s infinite;
+    transform-origin: center center;
+    transform: scale(1);
+    z-index: -1;
+}
+
+@keyframes zoom-in {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.15);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+.scrollbar-hide{
+    scrollbar-width: none;
 }

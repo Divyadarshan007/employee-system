@@ -34,10 +34,9 @@ const Services = () => {
         },
     ]
     return (
-        <section className="service-section h-[92.5vh] py-[40px]">
+        <section className="service-section h-screen py-[40px]">
             <div className="container mx-auto">
-                {/* <p className="text-center text-[#03228F] uppercase">Services</p> */}
-                <h2 className="text-3xl font-bold text-center">We Are Offering All Kinds of IT Solutions Services</h2>
+                <h2 className="text-3xl font-bold text-[#bbb] text-center">We Are Offering All Kinds of IT Solutions Services</h2>
             </div>
             <div className="container mx-auto">
                 <div className="flex flex-wrap py-[30px]">
