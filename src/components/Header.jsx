@@ -16,7 +16,7 @@ const Header = ({ isLoggedIn, setIsLoggedIn }) => {
     }
 
     return (
-        <header className="bg-color-header fixed top-0 w-full z-50">
+        <header className="bg-color-header md:relative fixed top-0 w-full z-50">
             <div className="max-w-screen-xl mx-auto p-4 flex items-center justify-between">
                 <Link to="/" className="flex items-center">
                     <img src="/images/logo.png" className="h-8" alt="logo" />
@@ -37,7 +37,9 @@ const Header = ({ isLoggedIn, setIsLoggedIn }) => {
                     {isLoggedIn ? (
                         <>
                             <h2 className='text-lg font-semibold text-white'>DEV</h2>
-                            <img src="/images/dev.webp" className='w-[30px] h-[30px] rounded-full' alt="dev" />
+                            <div className='w-[30px] h-[30px] rounded-full overflow-hidden'>
+                            <img src="/images/dev.webp" className='' alt="dev" />
+                            </div>
                             <button onClick={handleLogout} className="bg-rose-600 hover:bg-rose-700 text-white text-sm px-4 py-2 rounded-lg">Logout</button>
                         </>
                     ) : pathname !== "/login" && (
@@ -51,8 +53,7 @@ const Header = ({ isLoggedIn, setIsLoggedIn }) => {
                     {isLoggedIn && (
                         <div className="flex items-center justify-center  gap-3 pb-4 border-b border-gray-600 mb-4">
                             <div className='w-10 h-10 overflow-hidden rounded-full'>
-                                <img src="/images/dev.webp" className=" " alt="profile" />
-
+                                <img src="/images/dev.webp" className="" alt="profile" />
                             </div>
                             <h2 className='text-lg font-semibold'>DEV</h2>
                         </div>

@@ -1,6 +1,6 @@
 const Contact = () => {
   return (
-    <section className="h-[92.5vh] flex items-center justify-center bg-[#152733] px-4">
+    <section className="min-h-screen flex items-center justify-center md:py-[40px] pt-[128px]  bg-[#152733] px-4">
       <div className="container mx-auto shadow-lg rounded-xl overflow-hidden backdrop-blur-md bg-white/5 border border-white/10">
         <div className="flex flex-col md:flex-row">
           

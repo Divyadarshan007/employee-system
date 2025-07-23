@@ -34,7 +34,7 @@ const Services = () => {
         },
     ]
     return (
-        <section className="service-section h-screen py-[40px]">
+        <section className="service-section m-h-screen md:py-[40px] pt-[128px]">
             <div className="container mx-auto">
                 <h2 className="text-3xl font-bold text-[#bbb] text-center">We Are Offering All Kinds of IT Solutions Services</h2>
             </div>
