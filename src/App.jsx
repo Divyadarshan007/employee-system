@@ -31,9 +31,10 @@ const App = () => {
                     <ProtectedRouteTwo isLoggedIn={isLoggedIn}>
                         <Login setIsLoggedIn={setIsLoggedIn} />
                     </ProtectedRouteTwo>
-                }/>
+                } />
                 <Route path="/employees" element={<ProtectedRoutes Component={Employees} />} />
                 <Route path="/add-employee" element={<ProtectedRoutes Component={AddEmployee} />} />
+                <Route path="/edit-employee" element={<ProtectedRoutes Component={EditEmployee} />} />
                 <Route path="/edit-employee/:id" element={<ProtectedRoutes Component={EditEmployee} />} />
             </Routes>
             <ToastContainer />

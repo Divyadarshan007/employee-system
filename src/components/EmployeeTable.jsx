@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom"
 
-const EmployeeTable = ({ employees, employeeDelete, setEmployees }) => {
+const EmployeeTable = ({ employees, deleteEmployee, setEmployees }) => {
 
     const handleDelete = (id) => {
-        employeeDelete(id);
+        deleteEmployee(id);
     }
 
 
@@ -43,7 +43,7 @@ const EmployeeTable = ({ employees, employeeDelete, setEmployees }) => {
                                 {idx + 1}
                             </td>
                             <td className="px-6 py-4">{emp.name}</td>
-                            <td className="px-6 py-4">{emp.salary}</td>
+                            <td className="px-6 py-4">{Number(emp.salary).toLocaleString('en-IN', { style: 'currency', currency: 'INR' })}</td>
                             <td className="px-6 py-4">{emp.department}</td>
                             <td className="px-6 py-4 flex items-center gap-4">
                                 <Link

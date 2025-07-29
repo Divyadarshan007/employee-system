@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from 'react'
+import { X } from 'lucide-react';
+import { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom'
 import { toast } from 'react-toastify';
 
 const EditEmployee = () => {
     const navigate = useNavigate();
     const { id } = useParams()
-    console.log(id);
 
     const [input, setInput] = useState({
         name: "", salary: "", department: "",
@@ -19,7 +19,6 @@ const EditEmployee = () => {
 
         if (editEmp) {
             setInput(editEmp);
-            console.log(editEmp);
         } else {
             toast.error("User Not Found !");
             navigate("/employee");
@@ -34,13 +33,11 @@ const EditEmployee = () => {
         e.preventDefault();
 
         const employees = JSON.parse(localStorage.getItem("employees")) || [];
-        const updatedEmp = employees.map((emp) => {
-            return emp.id == id ? {
-                ...emp, ...input
-            } : emp
+        const updatedData = employees.map((data) => {
+            return data.id == id ? { ...input } : data
         })
 
-        localStorage.setItem("employees", JSON.stringify(updatedEmp));
+        localStorage.setItem("employees", JSON.stringify(updatedData));
         toast.success("Data Updated Successfully !");
         setInput({ name: "", salary: "", department: "" });
         navigate("/employees");
@@ -49,11 +46,17 @@ const EditEmployee = () => {
     return (
         <section className="min-h-screen bg-[#152733] flex items-center justify-center px-4">
             <div className="w-full max-w-2xl bg-white/5 backdrop-blur-md border border-white/10 rounded-xl shadow-lg p-8">
+                <div className="flex justify-end text-white cursor-pointer" onClick={() => {
+                    navigate("/employees")
+                }}>
+                    <X />
+                </div>
                 <h2 className="text-2xl font-bold text-white mb-6 text-center border-b border-white/10 pb-3">
                     Edit Employee
                 </h2>
 
                 <form onSubmit={handleUpdate} className="grid grid-cols-1 gap-6">
+
                     <div>
                         <label htmlFor="name" className="block mb-1 text-sm font-medium text-white">
                             Employee Name

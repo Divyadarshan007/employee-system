@@ -1,3 +1,4 @@
+import { X } from "lucide-react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -5,9 +6,7 @@ const AddEmployee = () => {
     const navigate = useNavigate();
 
     const [input, setInput] = useState({
-        name: "",
-        salary: "",
-        department: "",
+        name: "", salary: "", department: "",
     });
 
     const handleChange = (e) => {
@@ -17,9 +16,9 @@ const AddEmployee = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        const employeeDetail = { id: Date.now(), ...input };
+        const employeeData = { id: Date.now(), ...input };
         const employees = JSON.parse(localStorage.getItem("employees")) || [];
-        employees.push(employeeDetail);
+        employees.push(employeeData);
 
         localStorage.setItem("employees", JSON.stringify(employees));
         setInput({ name: "", salary: "", department: "" });
@@ -29,6 +28,9 @@ const AddEmployee = () => {
     return (
         <section className="min-h-screen bg-[#152733] flex items-center justify-center px-4">
             <div className="w-full max-w-2xl bg-white/5 backdrop-blur-md border border-white/10 rounded-xl shadow-lg p-8">
+                <div className="flex justify-end text-white cursor-pointer" onClick={() => navigate("/employees")}>
+                    <X />
+                </div>
                 <h2 className="text-2xl font-bold text-white mb-6 text-center border-b border-white/10 pb-3">
                     Add New Employee
                 </h2>

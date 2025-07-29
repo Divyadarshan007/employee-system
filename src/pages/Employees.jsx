@@ -14,7 +14,7 @@ const Employees = () => {
         setSearchEmp(data);
     }, []);
 
-    const employeeDelete = (id) => {
+    const deleteEmployee = (id) => {
         const updatedEmployee = employees.filter((emp) => {
             return emp.id !== id;
         })
@@ -23,7 +23,6 @@ const Employees = () => {
         toast.success("Employee Deleted Successfully !");
     }
 
-    let newArr = [...employees]
     const handleSearch = (e) => {
         const value = e.target.value;
         setSearch({ ...search, [e.target.id]: e.target.value })
@@ -92,7 +91,7 @@ const Employees = () => {
                     <EmployeeTable
                         employees={employees}
                         setEmployees={setEmployees}
-                        employeeDelete={employeeDelete}
+                        deleteEmployee={deleteEmployee}
                     />
                 </div>
             </div>
